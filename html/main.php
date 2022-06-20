@@ -64,7 +64,7 @@
                <?php elseif(get_class($product) === "Game"):?>
                   <li>Contenuto: <?php echo $product->getBestAge()?></li>
                   <li>Contenuto: <?php echo $product->getWarnings()?></li>
-               <?php elseif(get_class($product) === "For"):?>
+               <?php elseif(get_class($product) === "Furniture"):?>
                   <li>Tipo di animale ideale: <?php echo $product->getAnimalType()?></li>
                   <li>Grandezza animale: <?php echo $product->getsize()?></li>
                   <li>Dimensione mobile: <?php echo $product->getDimension()?></li>
