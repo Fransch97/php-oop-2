@@ -7,8 +7,6 @@ class User{
     private $adress;
     private $card_date;
     private $success = false;
-    private $mail;
-    private $password;
     private $discount = 0;
 
 

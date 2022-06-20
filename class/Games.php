@@ -17,4 +17,11 @@ class Game extends Product{
     public function setWarnings($_warnings){
         $this->warnings = $_warnings;
     }
+    //GETTER
+    public function getBestAge(){
+        return $this->bestAge;
+    }
+    public function getWarnings(){
+        return $this->warnings;
+    }
 }

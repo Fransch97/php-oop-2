@@ -5,12 +5,11 @@ class Product{
     private $title;
     private $categorie;
     private $produced_country;
-    public function __construct($_price, $_title, $_categorie, $_produced_country)
+    public function __construct($_price, $_title, $_categorie)
     {
         $this->price = $_price;  
         $this->title = $_title;
         $this->categorie = $_categorie;
-        $this->produced_country = $_produced_country;
     }
 
     //SETTER
@@ -23,9 +22,12 @@ class Product{
     public function setCategorie($_categorie){
         $this->categorie = $_categorie;
     }
+    public function setProduced($_country){
+        $this->produced_country = $_country;
+    }
+
 
     //GETTER
-
     public function getPrice(){
         return $this->price;
     }
@@ -35,6 +37,8 @@ class Product{
     public function getCategorie(){
         return $this->categorie;
     }
-
+    public function getProduced(){
+        return $this->produced_country ;
+    }
     
 }

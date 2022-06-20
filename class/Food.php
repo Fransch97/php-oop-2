@@ -19,4 +19,14 @@ class Food extends Product{
     {
         $this->eat_content = $content;
     }
+
+    //GETTER
+    public function getExpiration_Date()
+    {
+        return $this->expiration_date;
+    }
+    public function getEatContent()
+    {
+        return $this->eat_content;
+    }
 }

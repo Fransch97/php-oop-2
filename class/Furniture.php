@@ -13,4 +13,27 @@ class Furniture extends Product{
         $this->size = $size;
         $this->dimensions = $dimensions;
     }
+
+    //SETTER
+    public function setAnimalType($type){
+        $this->animal_type = $type;
+    }
+    public function setsize($size){
+        $this->size = $size;
+    }
+    public function setDimension($dimension){
+        $this->dimensions = $dimension;
+    }
+
+
+    //GETTER
+    public function getAnimalType(){
+        return $this->animal_type;
+    }
+    public function getsize(){
+        return $this->size;
+    }
+    public function getDimension(){
+        return $this->dimensions;
+    }
 }
