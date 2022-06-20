@@ -16,7 +16,8 @@
    }
 
 
-   foreach($products as $product){
+   foreach($products as $key=>$product){
+
       if($product['class'] === "food"){
          $pro = new Food($product['expiration_date'],$product['content'],$product['price'],$product['title'],$product['categ'],$product['produced']);
          $productObj[] = $pro;
@@ -28,7 +29,14 @@
          $pro = new Furniture($product['animal_type'],$product['size'],$product['dimensions'],$product['price'],$product['title'],$product['categorie'],$product['produced']);
          $productObj[] = $pro;
       }
+
+      if($product['saison']){
+         $productObj[$key]->setSaison($product['saison'], $product['s_start'],$product['s_end']);
+      }
+
    }
+
+   var_dump($productObj)
    ?>
    <main>
       <h1>Utenti</h1>
@@ -52,7 +60,9 @@
 
 
       <h1>Prodotti</h1>
-      <?php foreach($productObj as $product):?>
+      <?php foreach($productObj as $product):
+         if(($product->getSaison() === false) or ($product->getSaisonStart() <= date('m') and $product->getSaisonEnd() >= date('m'))):
+         ?>
          <div class="product">
          <ul>
                <li>Titolo: <?php echo $product->getTitle()?></li>
@@ -71,6 +81,7 @@
                <?php endif ;?>
             </ul>
          </div>
+      <?php endif ;?> 
       <?php endforeach ;?> 
 
 

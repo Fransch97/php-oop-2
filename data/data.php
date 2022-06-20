@@ -58,7 +58,34 @@ $products = [
         'dimensions' =>"200x120x80",
         "produced" => "Italy"
 
-    ]
+    ],
+    [
+        'class' => 'furniture',
+        'price' => 80.32,
+        'title' => "Piscina per cani",
+        'categorie' => "Mobili",
+        'animal_type' => "cani",
+        'size' => "taglia media",
+        'dimensions' =>"200x220x180",
+        "produced" => "Italy",
+        'saison' => true,
+        's_start' => 5,
+        's_end' => 9
+
+    ],
+    [
+        'class' => 'game',
+        'price' => 23.32,
+        'title' => "Cappello babbo natale",
+        'categorie' => "Festività",
+        'bestAge' => "2 anni",
+        'warnings' => "Non far giocare ai bambini",
+        "produced" => "Italy",
+        'saison' => true,
+        's_start' => 11,
+        's_end' => 12
+    ],
+
 ];
 
 require_once __DIR__ . '/../class/Custumer.php';
