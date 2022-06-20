@@ -4,7 +4,7 @@
    $userObj =[];
    $productObj =[];
    
-   
+   // USERS
    foreach($users as $user){
       if(!$user["mail"] or !$user["password"]){
          $us = new User($user['name'],$user['surname'],$user['birth_date'],$user['country'],$user['adress'],$user['card_date']);
@@ -14,8 +14,10 @@
          $userObj[]= $us;
       }
    }
+   // END USER
+   
 
-
+   // PRODUCTS
    foreach($products as $key=>$product){
 
       if($product['class'] === "food"){
@@ -35,9 +37,14 @@
       }
 
    }
+   //END PRODUCTS
 
-   var_dump($productObj)
    ?>
+
+
+
+
+
    <main>
       <h1>Utenti</h1>
       <?php foreach($userObj as $user):
