@@ -58,7 +58,6 @@
                <li>Titolo: <?php echo $product->getTitle()?></li>
                <li>Prezzo: <?php echo $product->getPrice()?> €</li>
                <li>Categoria prodotto: <?php echo $product->getCategorie()?></li>
-               <li>Made in: <?php echo $product->getProduced()?></li>
                <?php if(get_class($product) === "Food"):?>
                   <li>Data di scadenza: <?php echo $product->getExpiration_Date()?></li>
                   <li>Contenuto: <?php echo $product->getEatContent()?></li>
