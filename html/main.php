@@ -8,11 +8,11 @@
    foreach($users as $user){
       if(!$user["mail"] or !$user["password"]){
          $us = new User($user['name'],$user['surname'],$user['birth_date'],$user['country'],$user['adress'],$user['card_date']);
-         $userObj[]= $us;
       }else{
          $us = new UserAccount($user['name'],$user['surname'],$user['birth_date'],$user['country'],$user['adress'],$user['card_date'],$user['mail'],$user['password']);
-         $userObj[]= $us;
       }
+      $userObj[]= $us;
+
    }
    // END USER
    
@@ -38,7 +38,6 @@
 
    }
    //END PRODUCTS
-
    ?>
 
 

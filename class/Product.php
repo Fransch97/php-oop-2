@@ -5,9 +5,9 @@ class Product{
     private $title;
     private $categorie;
     private $produced_country;
-    private $saison_product = false;
-    private $saison_start;
-    private $saison_end;
+    private $season_product = false;
+    private $season_start;
+    private $season_end;
     public function __construct($_price, $_title, $_categorie)
     {
         $this->price = $_price;  
@@ -30,10 +30,10 @@ class Product{
     }
     public function setSaison($bool, $start_month,$endMonth){
         if($bool){
-            $this->saison_start = $start_month;
-            $this->saison_end= $endMonth;
+            $this->season_start = $start_month;
+            $this->season_end= $endMonth;
         }
-        $this->saison_product= $bool;
+        $this->season_product= $bool;
     }
 
 
@@ -51,12 +51,12 @@ class Product{
         return $this->produced_country ;
     }
     public function getSaison(){
-        return $this->saison_product;
+        return $this->season_product;
     }
     public function getSaisonStart(){
-        return $this->saison_start;
+        return $this->season_start;
     }
     public function getSaisonEnd(){
-        return $this->saison_end;
+        return $this->season_end;
     }
 }
